@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3251AADE1DA3706E00A95225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251AADD1DA3706E00A95225 /* AppDelegate.swift */; };
+		3251AAE01DA3706E00A95225 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251AADF1DA3706E00A95225 /* ViewController.swift */; };
+		3251AAE31DA3706E00A95225 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3251AAE11DA3706E00A95225 /* Main.storyboard */; };
+		3251AAE51DA3706E00A95225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3251AAE41DA3706E00A95225 /* Assets.xcassets */; };
+		3251AAE81DA3706E00A95225 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3251AAE61DA3706E00A95225 /* LaunchScreen.storyboard */; };
+		3251AAF31DA3706E00A95225 /* bees_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251AAF21DA3706E00A95225 /* bees_iosTests.swift */; };
+		52301D01475A16EBD72493BC /* Pods_bees_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D0578636A76605A5A64F33 /* Pods_bees_ios.framework */; };
+		5DC66ACCA382C00170AE0C6D /* Pods_bees_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F089891DA7AFBE02AB29FA8 /* Pods_bees_iosTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3251AAEF1DA3706E00A95225 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3251AAD21DA3706E00A95225 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3251AAD91DA3706E00A95225;
+			remoteInfo = "bees-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3251AADA1DA3706E00A95225 /* bees-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bees-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3251AADD1DA3706E00A95225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3251AADF1DA3706E00A95225 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3251AAE21DA3706E00A95225 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3251AAE41DA3706E00A95225 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3251AAE71DA3706E00A95225 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3251AAE91DA3706E00A95225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3251AAEE1DA3706E00A95225 /* bees-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bees-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3251AAF21DA3706E00A95225 /* bees_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bees_iosTests.swift; sourceTree = "<group>"; };
+		3251AAF41DA3706E00A95225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65D0578636A76605A5A64F33 /* Pods_bees_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bees_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		665244A58BEC7FD0207E4F84 /* Pods-bees-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bees-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-bees-ios/Pods-bees-ios.release.xcconfig"; sourceTree = "<group>"; };
+		6F089891DA7AFBE02AB29FA8 /* Pods_bees_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bees_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B831AE9B5E7E3EFD92F227B /* Pods-bees-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bees-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bees-ios/Pods-bees-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		BF0F2525ECA43CCD8E38AA2F /* Pods-bees-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bees-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bees-iosTests/Pods-bees-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ED3BBA8656B4044F65669202 /* Pods-bees-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bees-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-bees-iosTests/Pods-bees-iosTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3251AAD71DA3706E00A95225 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52301D01475A16EBD72493BC /* Pods_bees_ios.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3251AAEB1DA3706E00A95225 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DC66ACCA382C00170AE0C6D /* Pods_bees_iosTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04F7120CC9B95BD0C30DE552 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B831AE9B5E7E3EFD92F227B /* Pods-bees-ios.debug.xcconfig */,
+				665244A58BEC7FD0207E4F84 /* Pods-bees-ios.release.xcconfig */,
+				BF0F2525ECA43CCD8E38AA2F /* Pods-bees-iosTests.debug.xcconfig */,
+				ED3BBA8656B4044F65669202 /* Pods-bees-iosTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3251AAD11DA3706E00A95225 = {
+			isa = PBXGroup;
+			children = (
+				3251AADC1DA3706E00A95225 /* bees-ios */,
+				3251AAF11DA3706E00A95225 /* bees-iosTests */,
+				3251AADB1DA3706E00A95225 /* Products */,
+				04F7120CC9B95BD0C30DE552 /* Pods */,
+				F0868DB616B0C06B9BDE365C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3251AADB1DA3706E00A95225 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3251AADA1DA3706E00A95225 /* bees-ios.app */,
+				3251AAEE1DA3706E00A95225 /* bees-iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3251AADC1DA3706E00A95225 /* bees-ios */ = {
+			isa = PBXGroup;
+			children = (
+				3251AADD1DA3706E00A95225 /* AppDelegate.swift */,
+				3251AADF1DA3706E00A95225 /* ViewController.swift */,
+				3251AAE11DA3706E00A95225 /* Main.storyboard */,
+				3251AAE41DA3706E00A95225 /* Assets.xcassets */,
+				3251AAE61DA3706E00A95225 /* LaunchScreen.storyboard */,
+				3251AAE91DA3706E00A95225 /* Info.plist */,
+			);
+			path = "bees-ios";
+			sourceTree = "<group>";
+		};
+		3251AAF11DA3706E00A95225 /* bees-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				3251AAF21DA3706E00A95225 /* bees_iosTests.swift */,
+				3251AAF41DA3706E00A95225 /* Info.plist */,
+			);
+			path = "bees-iosTests";
+			sourceTree = "<group>";
+		};
+		F0868DB616B0C06B9BDE365C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65D0578636A76605A5A64F33 /* Pods_bees_ios.framework */,
+				6F089891DA7AFBE02AB29FA8 /* Pods_bees_iosTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3251AAD91DA3706E00A95225 /* bees-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3251AAF71DA3706E00A95225 /* Build configuration list for PBXNativeTarget "bees-ios" */;
+			buildPhases = (
+				71E570477B61212AA55BEB7A /* [CP] Check Pods Manifest.lock */,
+				3251AAD61DA3706E00A95225 /* Sources */,
+				3251AAD71DA3706E00A95225 /* Frameworks */,
+				3251AAD81DA3706E00A95225 /* Resources */,
+				700411B471E57F7D94D3077A /* [CP] Embed Pods Frameworks */,
+				FD38D63658E44D89189B77EA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "bees-ios";
+			productName = "bees-ios";
+			productReference = 3251AADA1DA3706E00A95225 /* bees-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3251AAED1DA3706E00A95225 /* bees-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3251AAFA1DA3706E00A95225 /* Build configuration list for PBXNativeTarget "bees-iosTests" */;
+			buildPhases = (
+				0C60052F3066B82C893F4F04 /* [CP] Check Pods Manifest.lock */,
+				3251AAEA1DA3706E00A95225 /* Sources */,
+				3251AAEB1DA3706E00A95225 /* Frameworks */,
+				3251AAEC1DA3706E00A95225 /* Resources */,
+				8FD836174666E330F57A636D /* [CP] Embed Pods Frameworks */,
+				F4F1A70237CBD0F879410DB3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3251AAF01DA3706E00A95225 /* PBXTargetDependency */,
+			);
+			name = "bees-iosTests";
+			productName = "bees-iosTests";
+			productReference = 3251AAEE1DA3706E00A95225 /* bees-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3251AAD21DA3706E00A95225 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Cameron Deardorff";
+				TargetAttributes = {
+					3251AAD91DA3706E00A95225 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = CU74U85Q8E;
+						ProvisioningStyle = Automatic;
+					};
+					3251AAED1DA3706E00A95225 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = CU74U85Q8E;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3251AAD91DA3706E00A95225;
+					};
+				};
+			};
+			buildConfigurationList = 3251AAD51DA3706E00A95225 /* Build configuration list for PBXProject "bees-ios" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3251AAD11DA3706E00A95225;
+			productRefGroup = 3251AADB1DA3706E00A95225 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3251AAD91DA3706E00A95225 /* bees-ios */,
+				3251AAED1DA3706E00A95225 /* bees-iosTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3251AAD81DA3706E00A95225 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3251AAE81DA3706E00A95225 /* LaunchScreen.storyboard in Resources */,
+				3251AAE51DA3706E00A95225 /* Assets.xcassets in Resources */,
+				3251AAE31DA3706E00A95225 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3251AAEC1DA3706E00A95225 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C60052F3066B82C893F4F04 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		700411B471E57F7D94D3077A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bees-ios/Pods-bees-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71E570477B61212AA55BEB7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8FD836174666E330F57A636D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bees-iosTests/Pods-bees-iosTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4F1A70237CBD0F879410DB3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bees-iosTests/Pods-bees-iosTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD38D63658E44D89189B77EA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bees-ios/Pods-bees-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3251AAD61DA3706E00A95225 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3251AAE01DA3706E00A95225 /* ViewController.swift in Sources */,
+				3251AADE1DA3706E00A95225 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3251AAEA1DA3706E00A95225 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3251AAF31DA3706E00A95225 /* bees_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3251AAF01DA3706E00A95225 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3251AAD91DA3706E00A95225 /* bees-ios */;
+			targetProxy = 3251AAEF1DA3706E00A95225 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3251AAE11DA3706E00A95225 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3251AAE21DA3706E00A95225 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3251AAE61DA3706E00A95225 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3251AAE71DA3706E00A95225 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3251AAF51DA3706E00A95225 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3251AAF61DA3706E00A95225 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3251AAF81DA3706E00A95225 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B831AE9B5E7E3EFD92F227B /* Pods-bees-ios.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CU74U85Q8E;
+				INFOPLIST_FILE = "bees-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Cameron-Deardorff.bees-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3251AAF91DA3706E00A95225 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 665244A58BEC7FD0207E4F84 /* Pods-bees-ios.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CU74U85Q8E;
+				INFOPLIST_FILE = "bees-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Cameron-Deardorff.bees-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		3251AAFB1DA3706E00A95225 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF0F2525ECA43CCD8E38AA2F /* Pods-bees-iosTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = CU74U85Q8E;
+				INFOPLIST_FILE = "bees-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Cameron-Deardorff.bees-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bees-ios.app/bees-ios";
+			};
+			name = Debug;
+		};
+		3251AAFC1DA3706E00A95225 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED3BBA8656B4044F65669202 /* Pods-bees-iosTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = CU74U85Q8E;
+				INFOPLIST_FILE = "bees-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Cameron-Deardorff.bees-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bees-ios.app/bees-ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3251AAD51DA3706E00A95225 /* Build configuration list for PBXProject "bees-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3251AAF51DA3706E00A95225 /* Debug */,
+				3251AAF61DA3706E00A95225 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3251AAF71DA3706E00A95225 /* Build configuration list for PBXNativeTarget "bees-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3251AAF81DA3706E00A95225 /* Debug */,
+				3251AAF91DA3706E00A95225 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3251AAFA1DA3706E00A95225 /* Build configuration list for PBXNativeTarget "bees-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3251AAFB1DA3706E00A95225 /* Debug */,
+				3251AAFC1DA3706E00A95225 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3251AAD21DA3706E00A95225 /* Project object */;
+}
