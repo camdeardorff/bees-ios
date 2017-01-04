@@ -13,6 +13,8 @@
 		3251AAE51DA3706E00A95225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3251AAE41DA3706E00A95225 /* Assets.xcassets */; };
 		3251AAE81DA3706E00A95225 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3251AAE61DA3706E00A95225 /* LaunchScreen.storyboard */; };
 		3251AAF31DA3706E00A95225 /* bees_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251AAF21DA3706E00A95225 /* bees_iosTests.swift */; };
+		32CE22C91E0B208E00A23EF3 /* BeesCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE22C81E0B208E00A23EF3 /* BeesCommunicator.swift */; };
+		32D5A8171E0B853F0064C4E1 /* jumpy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 32D5A8161E0B853F0064C4E1 /* jumpy.gif */; };
 		52301D01475A16EBD72493BC /* Pods_bees_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D0578636A76605A5A64F33 /* Pods_bees_ios.framework */; };
 		5DC66ACCA382C00170AE0C6D /* Pods_bees_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F089891DA7AFBE02AB29FA8 /* Pods_bees_iosTests.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +40,8 @@
 		3251AAEE1DA3706E00A95225 /* bees-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bees-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3251AAF21DA3706E00A95225 /* bees_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bees_iosTests.swift; sourceTree = "<group>"; };
 		3251AAF41DA3706E00A95225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32CE22C81E0B208E00A23EF3 /* BeesCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeesCommunicator.swift; sourceTree = "<group>"; };
+		32D5A8161E0B853F0064C4E1 /* jumpy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = jumpy.gif; sourceTree = "<group>"; };
 		65D0578636A76605A5A64F33 /* Pods_bees_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bees_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		665244A58BEC7FD0207E4F84 /* Pods-bees-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bees-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-bees-ios/Pods-bees-ios.release.xcconfig"; sourceTree = "<group>"; };
 		6F089891DA7AFBE02AB29FA8 /* Pods_bees_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bees_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,9 +107,11 @@
 				3251AADD1DA3706E00A95225 /* AppDelegate.swift */,
 				3251AADF1DA3706E00A95225 /* ViewController.swift */,
 				3251AAE11DA3706E00A95225 /* Main.storyboard */,
+				32D5A8161E0B853F0064C4E1 /* jumpy.gif */,
 				3251AAE41DA3706E00A95225 /* Assets.xcassets */,
 				3251AAE61DA3706E00A95225 /* LaunchScreen.storyboard */,
 				3251AAE91DA3706E00A95225 /* Info.plist */,
+				32CE22C81E0B208E00A23EF3 /* BeesCommunicator.swift */,
 			);
 			path = "bees-ios";
 			sourceTree = "<group>";
@@ -179,17 +185,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Cameron Deardorff";
 				TargetAttributes = {
 					3251AAD91DA3706E00A95225 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = CU74U85Q8E;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					3251AAED1DA3706E00A95225 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = CU74U85Q8E;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3251AAD91DA3706E00A95225;
 					};
@@ -221,6 +229,7 @@
 			files = (
 				3251AAE81DA3706E00A95225 /* LaunchScreen.storyboard in Resources */,
 				3251AAE51DA3706E00A95225 /* Assets.xcassets in Resources */,
+				32D5A8171E0B853F0064C4E1 /* jumpy.gif in Resources */,
 				3251AAE31DA3706E00A95225 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,7 +256,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		700411B471E57F7D94D3077A /* [CP] Embed Pods Frameworks */ = {
@@ -277,7 +286,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		8FD836174666E330F57A636D /* [CP] Embed Pods Frameworks */ = {
@@ -334,6 +343,7 @@
 			files = (
 				3251AAE01DA3706E00A95225 /* ViewController.swift in Sources */,
 				3251AADE1DA3706E00A95225 /* AppDelegate.swift in Sources */,
+				32CE22C91E0B208E00A23EF3 /* BeesCommunicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,14 +403,13 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -443,12 +452,12 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -464,7 +473,6 @@
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -473,11 +481,14 @@
 			baseConfigurationReference = 9B831AE9B5E7E3EFD92F227B /* Pods-bees-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = CU74U85Q8E;
 				INFOPLIST_FILE = "bees-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Cameron-Deardorff.bees-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -487,11 +498,14 @@
 			baseConfigurationReference = 665244A58BEC7FD0207E4F84 /* Pods-bees-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = CU74U85Q8E;
 				INFOPLIST_FILE = "bees-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Cameron-Deardorff.bees-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -500,7 +514,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BF0F2525ECA43CCD8E38AA2F /* Pods-bees-iosTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = CU74U85Q8E;
 				INFOPLIST_FILE = "bees-iosTests/Info.plist";
@@ -516,7 +529,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ED3BBA8656B4044F65669202 /* Pods-bees-iosTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = CU74U85Q8E;
 				INFOPLIST_FILE = "bees-iosTests/Info.plist";
