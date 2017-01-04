@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pRm-rO-zkf">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Bees?-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Bees?" id="BYZ-38-t0r" customClass="ViewController" customModule="bees_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,66 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jumpy.gif" translatesAutoresizingMaskIntoConstraints="NO" id="4d6-wE-SqF">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="92u-rw-ISJ"/>
+                                    <constraint firstAttribute="height" constant="150" id="MyC-zC-OPc"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="C9y-sC-kA2">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ivS-xJ-hkw" customClass="LineChartView" customModule="Charts">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="C9y-sC-kA2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="gOD-cd-MiI"/>
+                            <constraint firstItem="4d6-wE-SqF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nDl-Gd-npg"/>
+                            <constraint firstItem="4d6-wE-SqF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pTc-WD-K6k"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="C9y-sC-kA2" secondAttribute="trailing" id="skB-3b-fm2"/>
+                            <constraint firstItem="C9y-sC-kA2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="slP-ZD-aHy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="C9y-sC-kA2" secondAttribute="bottom" id="uFm-Hr-SLn"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Bees?" id="DYY-Hi-M2H">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="y15-m3-D8K">
+                            <connections>
+                                <action selector="refreshButtonWasPressed:" destination="BYZ-38-t0r" id="nlU-Bt-RjA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="lineChartView" destination="ivS-xJ-hkw" id="s2p-R3-MWy"/>
+                        <outlet property="loadingImage" destination="4d6-wE-SqF" id="3oe-EP-E6p"/>
+                        <outlet property="refreshButton" destination="y15-m3-D8K" id="e8N-CM-ZBp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="658" y="168"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="G1B-zO-QNy">
+            <objects>
+                <navigationController id="pRm-rO-zkf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qKr-mm-Cgs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YHh-FJ-62a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gZh-Xx-OYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-513" y="193"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="jumpy.gif" width="256" height="256"/>
+    </resources>
 </document>
