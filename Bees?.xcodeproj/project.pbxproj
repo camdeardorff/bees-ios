@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		323374211E3796A2005D2B5D /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 323374201E3796A2005D2B5D /* Logo.png */; };
 		3251AADE1DA3706E00A95225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251AADD1DA3706E00A95225 /* AppDelegate.swift */; };
 		3251AAE01DA3706E00A95225 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251AADF1DA3706E00A95225 /* ViewController.swift */; };
 		3251AAE31DA3706E00A95225 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3251AAE11DA3706E00A95225 /* Main.storyboard */; };
@@ -14,7 +15,6 @@
 		3251AAE81DA3706E00A95225 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3251AAE61DA3706E00A95225 /* LaunchScreen.storyboard */; };
 		3251AAF31DA3706E00A95225 /* bees_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251AAF21DA3706E00A95225 /* bees_iosTests.swift */; };
 		328B50E51E36DD2D00C499B6 /* BeesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328B50E41E36DD2D00C499B6 /* BeesModels.swift */; };
-		328B50E71E36E3FC00C499B6 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 328B50E61E36E3FC00C499B6 /* Icon.png */; };
 		32CE22C91E0B208E00A23EF3 /* BeesCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE22C81E0B208E00A23EF3 /* BeesCommunicator.swift */; };
 		32D5A8171E0B853F0064C4E1 /* jumpy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 32D5A8161E0B853F0064C4E1 /* jumpy.gif */; };
 		52301D01475A16EBD72493BC /* Pods_bees_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D0578636A76605A5A64F33 /* Pods_bees_ios.framework */; };
@@ -32,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		323374201E3796A2005D2B5D /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		3251AADA1DA3706E00A95225 /* Bees?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bees?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3251AADD1DA3706E00A95225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3251AADF1DA3706E00A95225 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,7 +44,6 @@
 		3251AAF21DA3706E00A95225 /* bees_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bees_iosTests.swift; sourceTree = "<group>"; };
 		3251AAF41DA3706E00A95225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		328B50E41E36DD2D00C499B6 /* BeesModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeesModels.swift; sourceTree = "<group>"; };
-		328B50E61E36E3FC00C499B6 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		32CE22C81E0B208E00A23EF3 /* BeesCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeesCommunicator.swift; sourceTree = "<group>"; };
 		32D5A8161E0B853F0064C4E1 /* jumpy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = jumpy.gif; sourceTree = "<group>"; };
 		65D0578636A76605A5A64F33 /* Pods_bees_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bees_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,7 +112,7 @@
 				3251AADF1DA3706E00A95225 /* ViewController.swift */,
 				3251AAE11DA3706E00A95225 /* Main.storyboard */,
 				32D5A8161E0B853F0064C4E1 /* jumpy.gif */,
-				328B50E61E36E3FC00C499B6 /* Icon.png */,
+				323374201E3796A2005D2B5D /* Logo.png */,
 				3251AAE41DA3706E00A95225 /* Assets.xcassets */,
 				3251AAE61DA3706E00A95225 /* LaunchScreen.storyboard */,
 				3251AAE91DA3706E00A95225 /* Info.plist */,
@@ -234,8 +234,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3251AAE81DA3706E00A95225 /* LaunchScreen.storyboard in Resources */,
-				328B50E71E36E3FC00C499B6 /* Icon.png in Resources */,
 				3251AAE51DA3706E00A95225 /* Assets.xcassets in Resources */,
+				323374211E3796A2005D2B5D /* Logo.png in Resources */,
 				32D5A8171E0B853F0064C4E1 /* jumpy.gif in Resources */,
 				3251AAE31DA3706E00A95225 /* Main.storyboard in Resources */,
 			);
