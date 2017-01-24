@@ -8,11 +8,12 @@
 
 import UIKit
 import Charts
-import SwiftGifOrigin
+import FLAnimatedImage
 
 class ViewController: UIViewController {
     
-    @IBOutlet var loadingImage: UIImageView!
+    // ui references
+    @IBOutlet var loadingImage: FLAnimatedImageView!
     @IBOutlet var lineChartView: LineChartView!
     @IBOutlet var refreshButton: UIBarButtonItem!
     
@@ -20,16 +21,19 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let img = UIImage.gif(name: "jumpy")
-        loadingImage.image = img
-        
-        showLoadingAnimation()
         configureLineChart()
+        
+        // get the gif if it exists
+        if let gif = getLoadingGif() {
+            loadingImage.animatedImage = gif
+            showLoadingAnimation()
+        }
+        
+        // get the data and display it
         reloadChart(completion: { [weak self] in
             guard let strongSelf = self else { return }
             strongSelf.hideLoadingAnimation()
-            })
+        })
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,14 +41,20 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // function called on refresh button press. updates the chart
     @IBAction func refreshButtonWasPressed(_ sender: AnyObject) {
         showLoadingAnimation()
         reloadChart(completion: { [weak self] in
             guard let strongSelf = self else { return }
             strongSelf.hideLoadingAnimation()
-            })
+        })
     }
     
+    /**
+     # Reload Chart
+     asynchronously leverages the BeesCommunicator class object to get data for the chart. The data is then sent to the appropriate functions to display the chart
+     - Parameter completion: a closure to mark the end of the asynchrous task.
+     */
     func reloadChart(completion: @escaping () -> Void) {
         var localTimeZoneName: String { return (NSTimeZone.local as NSTimeZone).name }
         beesCommunicator.getTodaysRecords(inTimeZone: localTimeZoneName) { [weak self] (error, records) in
@@ -52,10 +62,11 @@ class ViewController: UIViewController {
             guard let strongSelf = self else {
                 completion()
                 return
-            }            
+            }
             // use the information given
             if error == nil && records == nil {
                 print("there was a problem decoding the message")
+                strongSelf.showErrorMessage()
             } else {
                 if let recs = records {
                     print(recs)
@@ -63,6 +74,7 @@ class ViewController: UIViewController {
                 } else {
                     if let err = error {
                         print(err)
+                        strongSelf.showErrorMessage()
                     }
                 }
             }
@@ -71,41 +83,30 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    func showLoadingAnimation() {
-        loadingImage.layer.zPosition = 10
-    }
-    
-    func hideLoadingAnimation() {
-        loadingImage.layer.zPosition = -10
-    }
-    
-    
-    func configureLineChart() {
-//        lineChartView.gridBackgroundColor = .black
-//        lineChartView.backgroundColor = .white
+    /// MARK: chart functions
+    // configures the chart before the data is displayed
+    private func configureLineChart() {
         
         let noDescription = Description()
         noDescription.text = nil
-        
+        lineChartView.noDataText = ""
         lineChartView.chartDescription = noDescription
         
         lineChartView.xAxis.labelPosition = .bottom
         lineChartView.xAxis.labelTextColor = .black
+        lineChartView.viewPortHandler.setMaximumScaleX(3)
         lineChartView.rightAxis.enabled = false
         lineChartView.animate(yAxisDuration: 2.0, easingOption: .easeInOutCubic)
     }
     
+    // transforms BeesRecords into data points appropriate for the charts and displays them
     func displayData(records: [BeesRecord]) {
         
-        var points = [ChartDataEntry]()
-        for i in 0..<records.count {
-            let point = ChartDataEntry(x: Double(i), y: records[i].loudness)
-            
-            points.append(point)
+        // turn the records into a series of points
+        let points : [ChartDataEntry] = records.enumerated().map { (index, record) in
+            ChartDataEntry(x: Double(index), y: record.loudness)
         }
-        
-        
+        // configure this dataset
         let loudnessDataSet = LineChartDataSet(values: points, label: nil)
         loudnessDataSet.circleColors = [BEES_GREY]
         loudnessDataSet.mode = .cubicBezier
@@ -120,6 +121,7 @@ class ViewController: UIViewController {
         loudnessDataSet.label = "MVNU Cafeteria Loudness Today"
         loudnessDataSet.drawFilledEnabled = true
         
+        //set the dataset to the chart
         let lineChartData = LineChartData(dataSet: loudnessDataSet)
         
         lineChartData.setValueTextColor(.clear)
@@ -128,10 +130,38 @@ class ViewController: UIViewController {
         
     }
     
+   
+    /// MARK: resource loading
+    // gets the gif from the bundle and returns it
+    private func getLoadingGif() -> FLAnimatedImage? {
+        if let path =  Bundle.main.path(forResource: "jumpy", ofType: "gif") {
+            if let data = NSData(contentsOfFile: path) {
+                return FLAnimatedImage(animatedGIFData: data as Data!)
+            }
+        }
+        return nil
+    }
+    
+    /// MARK: UI modifiers
+
+    private func showLoadingAnimation() {
+        loadingImage.layer.zPosition = 10
+        loadingImage.startAnimating()
+    }
+    
+    private func hideLoadingAnimation() {
+        loadingImage.layer.zPosition = -10
+        loadingImage.stopAnimating()
+    }
+    
+    private func showErrorMessage() {
+        lineChartView.noDataText = "No chart data available."
+        lineChartView.notifyDataSetChanged()
+    }
     
 }
 
-
+// axis formatter for the chart: takes the BeesRecords and formats them into axis value tics
 class AxisFormatter: NSObject, IAxisValueFormatter {
     
     var records: [BeesRecord]
@@ -147,20 +177,4 @@ class AxisFormatter: NSObject, IAxisValueFormatter {
             return ""
         }
     }
-}
-
-
-struct BeesRecord {
-    var loudness: Double
-    var range: BeesRange
-}
-
-struct BeesRange {
-    var from: String
-    var to: String
-}
-
-struct BeesError {
-    var message: String
-    var code: String
 }
