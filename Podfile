@@ -9,7 +9,7 @@ target 'bees-ios' do
   pod 'Alamofire', '~> 4.0'
   pod 'Charts'
   pod 'SwiftyJSON'
-  pod 'SwiftGifOrigin'
+  pod 'FLAnimatedImage', '~> 1.0'
   
   target 'bees-iosTests' do
     inherit! :search_paths
