@@ -41,6 +41,23 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: UI modifiers
+    
+    private func showLoadingAnimation() {
+        loadingImage.layer.zPosition = 10
+        loadingImage.startAnimating()
+    }
+    
+    private func hideLoadingAnimation() {
+        loadingImage.layer.zPosition = -10
+        loadingImage.stopAnimating()
+    }
+    
+    private func showErrorMessage() {
+        lineChartView.noDataText = "No chart data available."
+        lineChartView.notifyDataSetChanged()
+    }
+    
     // function called on refresh button press. updates the chart
     @IBAction func refreshButtonWasPressed(_ sender: AnyObject) {
         showLoadingAnimation()
@@ -50,40 +67,9 @@ class ViewController: UIViewController {
         })
     }
     
-    /**
-     # Reload Chart
-     asynchronously leverages the BeesCommunicator class object to get data for the chart. The data is then sent to the appropriate functions to display the chart
-     - Parameter completion: a closure to mark the end of the asynchrous task.
-     */
-    func reloadChart(completion: @escaping () -> Void) {
-        var localTimeZoneName: String { return (NSTimeZone.local as NSTimeZone).name }
-        beesCommunicator.getTodaysRecords(inTimeZone: localTimeZoneName) { [weak self] (error, records) in
-            // make sure that the reference is still good
-            guard let strongSelf = self else {
-                completion()
-                return
-            }
-            // use the information given
-            if error == nil && records == nil {
-                print("there was a problem decoding the message")
-                strongSelf.showErrorMessage()
-            } else {
-                if let recs = records {
-                    print(recs)
-                    strongSelf.displayData(records: recs)
-                } else {
-                    if let err = error {
-                        print(err)
-                        strongSelf.showErrorMessage()
-                    }
-                }
-            }
-            // all done
-            completion()
-        }
-    }
     
-    /// MARK: chart functions
+    
+    //MARK: chart functions
     // configures the chart before the data is displayed
     private func configureLineChart() {
         
@@ -131,7 +117,7 @@ class ViewController: UIViewController {
     }
     
    
-    /// MARK: resource loading
+    //MARK: resource loading
     // gets the gif from the bundle and returns it
     private func getLoadingGif() -> FLAnimatedImage? {
         if let path =  Bundle.main.path(forResource: "jumpy", ofType: "gif") {
@@ -142,23 +128,38 @@ class ViewController: UIViewController {
         return nil
     }
     
-    /// MARK: UI modifiers
-
-    private func showLoadingAnimation() {
-        loadingImage.layer.zPosition = 10
-        loadingImage.startAnimating()
+    /**
+     # Reload Chart
+     asynchronously leverages the BeesCommunicator class object to get data for the chart. The data is then sent to the appropriate functions to display the chart
+     - Parameter completion: a closure to mark the end of the asynchrous task.
+     */
+    func reloadChart(completion: @escaping () -> Void) {
+        var localTimeZoneName: String { return (NSTimeZone.local as NSTimeZone).name }
+        beesCommunicator.getTodaysRecords(inTimeZone: localTimeZoneName) { [weak self] (error, records) in
+            // make sure that the reference is still good
+            guard let strongSelf = self else {
+                completion()
+                return
+            }
+            // use the information given
+            if error == nil && records == nil {
+                print("there was a problem decoding the message")
+                strongSelf.showErrorMessage()
+            } else {
+                if let recs = records {
+                    print(recs)
+                    strongSelf.displayData(records: recs)
+                } else {
+                    if let err = error {
+                        print(err)
+                        strongSelf.showErrorMessage()
+                    }
+                }
+            }
+            // all done
+            completion()
+        }
     }
-    
-    private func hideLoadingAnimation() {
-        loadingImage.layer.zPosition = -10
-        loadingImage.stopAnimating()
-    }
-    
-    private func showErrorMessage() {
-        lineChartView.noDataText = "No chart data available."
-        lineChartView.notifyDataSetChanged()
-    }
-    
 }
 
 // axis formatter for the chart: takes the BeesRecords and formats them into axis value tics
