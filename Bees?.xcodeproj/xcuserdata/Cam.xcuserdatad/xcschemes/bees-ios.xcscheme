@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3251AAD91DA3706E00A95225"
-               BuildableName = "bees-ios.app"
-               BlueprintName = "bees-ios"
-               ReferencedContainer = "container:bees-ios.xcodeproj">
+               BuildableName = "Bees?.app"
+               BlueprintName = "Bees?"
+               ReferencedContainer = "container:Bees?.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3251AAED1DA3706E00A95225"
-               BuildableName = "bees-iosTests.xctest"
-               BlueprintName = "bees-iosTests"
-               ReferencedContainer = "container:bees-ios.xcodeproj">
+               BuildableName = "Bees?Tests.xctest"
+               BlueprintName = "Bees?Tests"
+               ReferencedContainer = "container:Bees?.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3251AAD91DA3706E00A95225"
-            BuildableName = "bees-ios.app"
-            BlueprintName = "bees-ios"
-            ReferencedContainer = "container:bees-ios.xcodeproj">
+            BuildableName = "Bees?.app"
+            BlueprintName = "Bees?"
+            ReferencedContainer = "container:Bees?.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3251AAD91DA3706E00A95225"
-            BuildableName = "bees-ios.app"
-            BlueprintName = "bees-ios"
-            ReferencedContainer = "container:bees-ios.xcodeproj">
+            BuildableName = "Bees?.app"
+            BlueprintName = "Bees?"
+            ReferencedContainer = "container:Bees?.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -92,9 +92,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3251AAD91DA3706E00A95225"
-            BuildableName = "bees-ios.app"
-            BlueprintName = "bees-ios"
-            ReferencedContainer = "container:bees-ios.xcodeproj">
+            BuildableName = "Bees?.app"
+            BlueprintName = "Bees?"
+            ReferencedContainer = "container:Bees?.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

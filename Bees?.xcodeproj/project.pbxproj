@@ -32,14 +32,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3251AADA1DA3706E00A95225 /* bees-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bees-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3251AADA1DA3706E00A95225 /* Bees?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bees?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3251AADD1DA3706E00A95225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3251AADF1DA3706E00A95225 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3251AAE21DA3706E00A95225 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3251AAE41DA3706E00A95225 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3251AAE71DA3706E00A95225 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3251AAE91DA3706E00A95225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3251AAEE1DA3706E00A95225 /* bees-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bees-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3251AAEE1DA3706E00A95225 /* Bees?Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bees?Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3251AAF21DA3706E00A95225 /* bees_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bees_iosTests.swift; sourceTree = "<group>"; };
 		3251AAF41DA3706E00A95225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		328B50E41E36DD2D00C499B6 /* BeesModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeesModels.swift; sourceTree = "<group>"; };
@@ -99,8 +99,8 @@
 		3251AADB1DA3706E00A95225 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3251AADA1DA3706E00A95225 /* bees-ios.app */,
-				3251AAEE1DA3706E00A95225 /* bees-iosTests.xctest */,
+				3251AADA1DA3706E00A95225 /* Bees?.app */,
+				3251AAEE1DA3706E00A95225 /* Bees?Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,9 +143,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3251AAD91DA3706E00A95225 /* bees-ios */ = {
+		3251AAD91DA3706E00A95225 /* Bees? */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3251AAF71DA3706E00A95225 /* Build configuration list for PBXNativeTarget "bees-ios" */;
+			buildConfigurationList = 3251AAF71DA3706E00A95225 /* Build configuration list for PBXNativeTarget "Bees?" */;
 			buildPhases = (
 				71E570477B61212AA55BEB7A /* [CP] Check Pods Manifest.lock */,
 				3251AAD61DA3706E00A95225 /* Sources */,
@@ -158,14 +158,14 @@
 			);
 			dependencies = (
 			);
-			name = "bees-ios";
+			name = "Bees?";
 			productName = "bees-ios";
-			productReference = 3251AADA1DA3706E00A95225 /* bees-ios.app */;
+			productReference = 3251AADA1DA3706E00A95225 /* Bees?.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3251AAED1DA3706E00A95225 /* bees-iosTests */ = {
+		3251AAED1DA3706E00A95225 /* Bees?Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3251AAFA1DA3706E00A95225 /* Build configuration list for PBXNativeTarget "bees-iosTests" */;
+			buildConfigurationList = 3251AAFA1DA3706E00A95225 /* Build configuration list for PBXNativeTarget "Bees?Tests" */;
 			buildPhases = (
 				0C60052F3066B82C893F4F04 /* [CP] Check Pods Manifest.lock */,
 				3251AAEA1DA3706E00A95225 /* Sources */,
@@ -179,9 +179,9 @@
 			dependencies = (
 				3251AAF01DA3706E00A95225 /* PBXTargetDependency */,
 			);
-			name = "bees-iosTests";
+			name = "Bees?Tests";
 			productName = "bees-iosTests";
-			productReference = 3251AAEE1DA3706E00A95225 /* bees-iosTests.xctest */;
+			productReference = 3251AAEE1DA3706E00A95225 /* Bees?Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -209,7 +209,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3251AAD51DA3706E00A95225 /* Build configuration list for PBXProject "bees-ios" */;
+			buildConfigurationList = 3251AAD51DA3706E00A95225 /* Build configuration list for PBXProject "Bees?" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -222,8 +222,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3251AAD91DA3706E00A95225 /* bees-ios */,
-				3251AAED1DA3706E00A95225 /* bees-iosTests */,
+				3251AAD91DA3706E00A95225 /* Bees? */,
+				3251AAED1DA3706E00A95225 /* Bees?Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -368,7 +368,7 @@
 /* Begin PBXTargetDependency section */
 		3251AAF01DA3706E00A95225 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3251AAD91DA3706E00A95225 /* bees-ios */;
+			target = 3251AAD91DA3706E00A95225 /* Bees? */;
 			targetProxy = 3251AAEF1DA3706E00A95225 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -529,7 +529,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Cameron-Deardorff.bees-iosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bees-ios.app/bees-ios";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bees?.app/Bees?";
 			};
 			name = Debug;
 		};
@@ -544,14 +544,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Cameron-Deardorff.bees-iosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bees-ios.app/bees-ios";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bees?.app/Bees?";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3251AAD51DA3706E00A95225 /* Build configuration list for PBXProject "bees-ios" */ = {
+		3251AAD51DA3706E00A95225 /* Build configuration list for PBXProject "Bees?" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3251AAF51DA3706E00A95225 /* Debug */,
@@ -560,7 +560,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3251AAF71DA3706E00A95225 /* Build configuration list for PBXNativeTarget "bees-ios" */ = {
+		3251AAF71DA3706E00A95225 /* Build configuration list for PBXNativeTarget "Bees?" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3251AAF81DA3706E00A95225 /* Debug */,
@@ -569,7 +569,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3251AAFA1DA3706E00A95225 /* Build configuration list for PBXNativeTarget "bees-iosTests" */ = {
+		3251AAFA1DA3706E00A95225 /* Build configuration list for PBXNativeTarget "Bees?Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3251AAFB1DA3706E00A95225 /* Debug */,

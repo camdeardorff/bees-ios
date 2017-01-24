@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:bees-ios.xcodeproj">
+      location = "group:/Users/Cam/Documents/Development/XCode projects/SWIFT/bees-ios/Bees?.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
