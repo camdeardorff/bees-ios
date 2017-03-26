@@ -13,11 +13,12 @@ import FLAnimatedImage
 class ViewController: UIViewController {
     
     // ui references
-    @IBOutlet var loadingImage: FLAnimatedImageView!
-    @IBOutlet var lineChartView: LineChartView!
-    @IBOutlet var refreshButton: UIBarButtonItem!
+    @IBOutlet var loadingImage: FLAnimatedImageView?
+    @IBOutlet var lineChartView: LineChartView?
+    @IBOutlet var refreshButton: UIBarButtonItem?
     
-    var beesCommunicator = BeesCommunicator()
+    
+    var beesCommunicator: BeesCommunicator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +26,12 @@ class ViewController: UIViewController {
         
         // get the gif if it exists
         if let gif = getLoadingGif() {
-            loadingImage.animatedImage = gif
+            loadingImage?.animatedImage = gif
             showLoadingAnimation()
         }
         
         // get the data and display it
-        reloadChart(completion: { [weak self] in
+        self.reloadChart(completion: { [weak self] in
             guard let strongSelf = self else { return }
             strongSelf.hideLoadingAnimation()
         })
@@ -41,32 +42,42 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        print("view did appear")
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        print("view will appear")
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        print("view did disappear")
+    }
+    
     //MARK: UI modifiers
     
     private func showLoadingAnimation() {
-        loadingImage.layer.zPosition = 10
-        loadingImage.startAnimating()
+        loadingImage?.layer.zPosition = 10
+        loadingImage?.startAnimating()
     }
     
     private func hideLoadingAnimation() {
-        loadingImage.layer.zPosition = -10
-        loadingImage.stopAnimating()
+        loadingImage?.layer.zPosition = -10
+        loadingImage?.stopAnimating()
     }
     
     private func showErrorMessage() {
-        lineChartView.noDataText = "No chart data available."
-        lineChartView.notifyDataSetChanged()
+        lineChartView?.noDataText = "No chart data available."
+        lineChartView?.notifyDataSetChanged()
     }
     
     // function called on refresh button press. updates the chart
     @IBAction func refreshButtonWasPressed(_ sender: AnyObject) {
         showLoadingAnimation()
-        reloadChart(completion: { [weak self] in
-            guard let strongSelf = self else { return }
-            strongSelf.hideLoadingAnimation()
+        self.reloadChart(completion: { [weak self] in
+            if let strongSelf = self {
+                strongSelf.hideLoadingAnimation()
+            }
         })
     }
-    
     
     
     //MARK: chart functions
@@ -75,14 +86,14 @@ class ViewController: UIViewController {
         
         let noDescription = Description()
         noDescription.text = nil
-        lineChartView.noDataText = ""
-        lineChartView.chartDescription = noDescription
+        lineChartView?.noDataText = ""
+        lineChartView?.chartDescription = noDescription
         
-        lineChartView.xAxis.labelPosition = .bottom
-        lineChartView.xAxis.labelTextColor = .black
-        lineChartView.viewPortHandler.setMaximumScaleX(3)
-        lineChartView.rightAxis.enabled = false
-        lineChartView.animate(yAxisDuration: 2.0, easingOption: .easeInOutCubic)
+        lineChartView?.xAxis.labelPosition = .bottom
+        lineChartView?.xAxis.labelTextColor = .black
+        lineChartView?.viewPortHandler.setMaximumScaleX(3)
+        lineChartView?.rightAxis.enabled = false
+        lineChartView?.animate(yAxisDuration: 2.0, easingOption: .easeInOutCubic)
     }
     
     // transforms BeesRecords into data points appropriate for the charts and displays them
@@ -104,15 +115,16 @@ class ViewController: UIViewController {
         loudnessDataSet.fillColor = BEES_BLUE
         loudnessDataSet.fillAlpha = 1
         loudnessDataSet.valueTextColor = BEES_BLUE
-        loudnessDataSet.label = "MVNU Cafeteria Loudness Today"
+        loudnessDataSet.label = "MVNU Cafeteria Loudness in Decibels, Today"
         loudnessDataSet.drawFilledEnabled = true
+        
         
         //set the dataset to the chart
         let lineChartData = LineChartData(dataSet: loudnessDataSet)
         
         lineChartData.setValueTextColor(.clear)
-        lineChartView.data = lineChartData
-        lineChartView.xAxis.valueFormatter = AxisFormatter(records: records)
+        lineChartView?.data = lineChartData
+        lineChartView?.xAxis.valueFormatter = AxisFormatter(records: records)
         
     }
     
@@ -135,7 +147,17 @@ class ViewController: UIViewController {
      */
     func reloadChart(completion: @escaping () -> Void) {
         var localTimeZoneName: String { return (NSTimeZone.local as NSTimeZone).name }
-        beesCommunicator.getTodaysRecords(inTimeZone: localTimeZoneName) { [weak self] (error, records) in
+        
+        if (beesCommunicator == nil) {
+            beesCommunicator = BeesCommunicator()
+        }
+        
+        guard let bc = beesCommunicator else {
+            completion()
+            return
+        }
+        
+        bc.getTodaysRecords(inTimeZone: localTimeZoneName) { [weak self] (error, records) in
             // make sure that the reference is still good
             guard let strongSelf = self else {
                 completion()
@@ -147,7 +169,7 @@ class ViewController: UIViewController {
                 strongSelf.showErrorMessage()
             } else {
                 if let recs = records {
-                    print(recs)
+//                    print(recs)
                     strongSelf.displayData(records: recs)
                 } else {
                     if let err = error {
