@@ -15,7 +15,6 @@ class BeesCommunicator {
     
     
     func getTodaysRecords(inTimeZone: String, completion: @escaping (BeesError?, [BeesRecord]?) -> Void) {
-        print("CD: get todays records with time zone: ", inTimeZone)
         
         getData(tz: inTimeZone) { [weak self] (data) in
             if let strongSelf = self {
@@ -33,7 +32,6 @@ class BeesCommunicator {
     
     
     private func getData(tz: String, completion: @escaping (Data?) -> Void) {
-        print("CD: get data")
         
         let SLASH = "*=SLASH=*"
         let timeZone = tz.replacingOccurrences(of: "/", with: SLASH)
@@ -44,7 +42,6 @@ class BeesCommunicator {
             .responseJSON { response in
                 
                 guard response.result.isSuccess else {
-                    print("Error while fetching remote rooms: \(response.result.error)")
                     completion(nil)
                     return
                 }
@@ -54,7 +51,6 @@ class BeesCommunicator {
     }
     
     private func decodeMessage(_ data: Data) -> (error: BeesError?, records: [BeesRecord]?) {
-        print("CD: decode message")
         
         let json = JSON(data: data)
         guard let success = json["success"].bool else { return (nil, nil) }

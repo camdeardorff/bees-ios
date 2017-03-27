@@ -42,16 +42,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        print("view did appear")
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        print("view will appear")
-    }
-    override func viewDidDisappear(_ animated: Bool) {
-        print("view did disappear")
-    }
-    
     //MARK: UI modifiers
     
     private func showLoadingAnimation() {
@@ -165,7 +155,6 @@ class ViewController: UIViewController {
             }
             // use the information given
             if error == nil && records == nil {
-                print("there was a problem decoding the message")
                 strongSelf.showErrorMessage()
             } else {
                 if let recs = records {
